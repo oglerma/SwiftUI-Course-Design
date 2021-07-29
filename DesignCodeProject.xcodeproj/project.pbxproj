@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90B7DEB26B2438400B48582 /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B7DEA26B2438400B48582 /* CourseDetail.swift */; };
 		E90B8D0C266687E0001655AC /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B8D0B266687E0001655AC /* MenuView.swift */; };
 		E9690B602664700300B76C10 /* DesignCodeProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9690B5F2664700300B76C10 /* DesignCodeProjectApp.swift */; };
 		E9690B622664700300B76C10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9690B612664700300B76C10 /* ContentView.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E90B7DEA26B2438400B48582 /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 		E90B8D0B266687E0001655AC /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		E9690B5C2664700300B76C10 /* DesignCodeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9690B5F2664700300B76C10 /* DesignCodeProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeProjectApp.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				E9AF71B62688DB9400A119A5 /* RingView.swift */,
 				E9F83C0426913E8900479A7B /* Modifier.swift */,
 				E97386DE269381B200CC711F /* CourseList.swift */,
+				E90B7DEA26B2438400B48582 /* CourseDetail.swift */,
 			);
 			path = DesignCodeProject;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				E9CDB34E26863017009ECA34 /* UpdateStore.swift in Sources */,
 				E9F83C0526913E8900479A7B /* Modifier.swift in Sources */,
 				E9CDB34A267B9E4C009ECA34 /* HomeView.swift in Sources */,
+				E90B7DEB26B2438400B48582 /* CourseDetail.swift in Sources */,
 				E9690B6F26648CEC00B76C10 /* PracticeView.swift in Sources */,
 				E9690B602664700300B76C10 /* DesignCodeProjectApp.swift in Sources */,
 			);
