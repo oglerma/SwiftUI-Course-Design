@@ -4,6 +4,13 @@
 //
 //  Created by Ociel Lerma on 7/28/21.
 //
+//
+//  CourseDetail.swift
+//  DesignCode
+//
+//  Created by Meng To on 2020-01-30.
+//  Copyright © 2020 Meng To. All rights reserved.
+//
 
 import SwiftUI
 
@@ -12,6 +19,7 @@ struct CourseDetail: View {
     @Binding var show: Bool
     @Binding var active: Bool
     @Binding var activeIndex: Int
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -39,7 +47,6 @@ struct CourseDetail: View {
                                 self.active = false
                                 self.activeIndex = -1
                             }
-                            
                         }
                     }
                     Spacer()
@@ -51,11 +58,11 @@ struct CourseDetail: View {
                 }
                 .padding(show ? 30 : 20)
                 .padding(.top, CGFloat(show ? 30 : 0))
-                //        .frame(width: show ? screen.width : screen.width - 60, height: show ? screen.height : 280)
-                .frame(maxWidth: CGFloat(show ? .infinity : screen.width - 60), maxHeight: CGFloat(show ? 460 : 280))
-                .background(Color(course.color))
-                .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
+                    //        .frame(width: show ? screen.width : screen.width - 60, height: show ? screen.height : 280)
+                    .frame(maxWidth: CGFloat(show ? .infinity : screen.width - 60), maxHeight: CGFloat(show ? 460 : 280))
+                    .background(Color(course.color))
+                    .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                    .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
                 
                 VStack(alignment: .leading, spacing: 30.0) {
                     Text("Take your SwiftUI app to the App Store with advanced techniques like API data, packages and CMS.")
@@ -76,6 +83,6 @@ struct CourseDetail: View {
 
 struct CourseDetail_Previews: PreviewProvider {
     static var previews: some View {
-        CourseDetail(course: courseData[0], show: .constant(true),active: .constant(false), activeIndex: .constant(-1))
+        CourseDetail(course: courseData[0], show: .constant(true), active: .constant(true), activeIndex: .constant(-1))
     }
 }
