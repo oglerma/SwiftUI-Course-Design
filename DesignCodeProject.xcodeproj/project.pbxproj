@@ -13,6 +13,7 @@
 		E90B7DF126B3B38800B48582 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B7DF026B3B38800B48582 /* DataStore.swift */; };
 		E90B7DF426B4506800B48582 /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = E90B7DF326B4506800B48582 /* Contentful */; };
 		E90B7DF626B452E100B48582 /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B7DF526B452E100B48582 /* CourseStore.swift */; };
+		E90B7DFA26B47A8B00B48582 /* ContantKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B7DF926B47A8B00B48582 /* ContantKeys.swift */; };
 		E90B8D0C266687E0001655AC /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B8D0B266687E0001655AC /* MenuView.swift */; };
 		E9690B602664700300B76C10 /* DesignCodeProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9690B5F2664700300B76C10 /* DesignCodeProjectApp.swift */; };
 		E9690B622664700300B76C10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9690B612664700300B76C10 /* ContentView.swift */; };
@@ -57,6 +58,7 @@
 		E90B7DEE26B3A66A00B48582 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		E90B7DF026B3B38800B48582 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		E90B7DF526B452E100B48582 /* CourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
+		E90B7DF926B47A8B00B48582 /* ContantKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContantKeys.swift; sourceTree = "<group>"; };
 		E90B8D0B266687E0001655AC /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		E9690B5C2664700300B76C10 /* DesignCodeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9690B5F2664700300B76C10 /* DesignCodeProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeProjectApp.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				E90B8D0B266687E0001655AC /* MenuView.swift */,
 				E9CDB349267B9E4C009ECA34 /* HomeView.swift */,
 				E9CDB34B26857CC1009ECA34 /* UpdateList.swift */,
+				E90B7DF926B47A8B00B48582 /* ContantKeys.swift */,
 				E9CDB34D26863017009ECA34 /* UpdateStore.swift */,
 				E90B7DF526B452E100B48582 /* CourseStore.swift */,
 				E90B7DEC26B3A4B900B48582 /* Data.swift */,
@@ -304,6 +307,7 @@
 				E97386DF269381B200CC711F /* CourseList.swift in Sources */,
 				E90B7DF626B452E100B48582 /* CourseStore.swift in Sources */,
 				E90B8D0C266687E0001655AC /* MenuView.swift in Sources */,
+				E90B7DFA26B47A8B00B48582 /* ContantKeys.swift in Sources */,
 				E9CDB348267AD10E009ECA34 /* Home.swift in Sources */,
 				E90B7DED26B3A4B900B48582 /* Data.swift in Sources */,
 				E9CDB34E26863017009ECA34 /* UpdateStore.swift in Sources */,
