@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E90B7DEB26B2438400B48582 /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B7DEA26B2438400B48582 /* CourseDetail.swift */; };
+		E90B7DED26B3A4B900B48582 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B7DEC26B3A4B900B48582 /* Data.swift */; };
+		E90B7DEF26B3A66A00B48582 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B7DEE26B3A66A00B48582 /* PostList.swift */; };
 		E90B8D0C266687E0001655AC /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B8D0B266687E0001655AC /* MenuView.swift */; };
 		E9690B602664700300B76C10 /* DesignCodeProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9690B5F2664700300B76C10 /* DesignCodeProjectApp.swift */; };
 		E9690B622664700300B76C10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9690B612664700300B76C10 /* ContentView.swift */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		E90B7DEA26B2438400B48582 /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
+		E90B7DEC26B3A4B900B48582 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		E90B7DEE26B3A66A00B48582 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		E90B8D0B266687E0001655AC /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		E9690B5C2664700300B76C10 /* DesignCodeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9690B5F2664700300B76C10 /* DesignCodeProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeProjectApp.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				E9CDB349267B9E4C009ECA34 /* HomeView.swift */,
 				E9CDB34B26857CC1009ECA34 /* UpdateList.swift */,
 				E9CDB34D26863017009ECA34 /* UpdateStore.swift */,
+				E90B7DEC26B3A4B900B48582 /* Data.swift */,
+				E90B7DEE26B3A66A00B48582 /* PostList.swift */,
 				E9CDB34F2686365F009ECA34 /* TabBar.swift */,
 				E9AF71B62688DB9400A119A5 /* RingView.swift */,
 				E9F83C0426913E8900479A7B /* Modifier.swift */,
@@ -276,12 +282,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9AF71B72688DB9400A119A5 /* RingView.swift in Sources */,
+				E90B7DEF26B3A66A00B48582 /* PostList.swift in Sources */,
 				E9CDB3502686365F009ECA34 /* TabBar.swift in Sources */,
 				E9690B622664700300B76C10 /* ContentView.swift in Sources */,
 				E9CDB34C26857CC1009ECA34 /* UpdateList.swift in Sources */,
 				E97386DF269381B200CC711F /* CourseList.swift in Sources */,
 				E90B8D0C266687E0001655AC /* MenuView.swift in Sources */,
 				E9CDB348267AD10E009ECA34 /* Home.swift in Sources */,
+				E90B7DED26B3A4B900B48582 /* Data.swift in Sources */,
 				E9CDB34E26863017009ECA34 /* UpdateStore.swift in Sources */,
 				E9F83C0526913E8900479A7B /* Modifier.swift in Sources */,
 				E9CDB34A267B9E4C009ECA34 /* HomeView.swift in Sources */,
