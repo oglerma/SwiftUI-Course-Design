@@ -7,7 +7,7 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-Constants.swift
+Constant.swift
 
 # Icon must end with two \r
 Icon
