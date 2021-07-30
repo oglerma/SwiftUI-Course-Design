@@ -8,25 +8,22 @@
 import SwiftUI
 
 struct Post: Codable, Identifiable {
-    var id = UUID()
+    var id : Int
     var title: String
     var body: String
 }
 
-
-class API {
-    func getPost() {
+class Api {
+    func getPosts(completion: @escaping ([Post]) -> ()) {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
         
-        URLSession.shared.dataTask(with: url) { data, _, _ in
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            let posts = try! JSONDecoder().decode([Post].self, from: data!)
             
-            do {
-                let response = try JSONDecoder().decode([Post].self, from: data!)
-                print(response)
-            } catch {
-                
+            DispatchQueue.main.async {
+                completion(posts)
             }
-        }.resume()
-        
+        }
+        .resume()
     }
 }
