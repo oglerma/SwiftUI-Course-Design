@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+	@State var show = false
     var body: some View {
 		ZStack(alignment: .top) {
 			Color.black.edgesIgnoringSafeArea(.all)
@@ -37,11 +38,18 @@ struct LoginView: View {
 				ZStack {
 					Image(uiImage: #imageLiteral(resourceName: "Blob"))
 						.offset(x: -250, y: -100)
+						.rotationEffect(Angle(degrees: show ? 360+90 : 90))
 						.blendMode(.plusDarker)
+						.animation(.linear(duration: 120).repeatForever(autoreverses: false))
+						.onAppear {
+							show = true
+						}
 					
 					Image(uiImage: #imageLiteral(resourceName: "Blob"))
 						.offset(x: -200, y: -250)
+						.rotationEffect(Angle(degrees: show ? 360 : 0), anchor: .leading)
 						.blendMode(.overlay)
+						.animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
 				}
 			)
 			.background(Image(uiImage: #imageLiteral(resourceName: "Card3")), alignment: .bottom)
