@@ -32,6 +32,8 @@ struct LoginView: View {
 				isSuccessful = true
 				
 				DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+					self.email = ""
+					self.password = ""
 					isSuccessful = false
 				}
 			}
