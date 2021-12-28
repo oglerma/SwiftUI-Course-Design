@@ -18,6 +18,10 @@
 		E91CD42C2700E9CA00E9BCCA /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CD42B2700E9CA00E9BCCA /* BlurView.swift */; };
 		E91CD430270206CB00E9BCCA /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CD42F270206CB00E9BCCA /* Buttons.swift */; };
 		E936636626BAD44600ACAF62 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E936636526BAD44600ACAF62 /* SDWebImageSwiftUI */; };
+		E94AA3942776450F00E8C0DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E94AA3932776450F00E8C0DC /* GoogleService-Info.plist */; };
+		E94AA397277646C900E8C0DC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E94AA396277646C900E8C0DC /* FirebaseAnalytics */; };
+		E94AA399277646C900E8C0DC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E94AA398277646C900E8C0DC /* FirebaseAuth */; };
+		E94AA39B277646C900E8C0DC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E94AA39A277646C900E8C0DC /* FirebaseFirestore */; };
 		E9690B602664700300B76C10 /* DesignCodeProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9690B5F2664700300B76C10 /* DesignCodeProjectApp.swift */; };
 		E9690B622664700300B76C10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9690B612664700300B76C10 /* ContentView.swift */; };
 		E9690B642664700500B76C10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9690B632664700500B76C10 /* Assets.xcassets */; };
@@ -72,6 +76,7 @@
 		E91CD4292700E89100E9BCCA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		E91CD42B2700E9CA00E9BCCA /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		E91CD42F270206CB00E9BCCA /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		E94AA3932776450F00E8C0DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9690B5C2664700300B76C10 /* DesignCodeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9690B5F2664700300B76C10 /* DesignCodeProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeProjectApp.swift; sourceTree = "<group>"; };
 		E9690B612664700300B76C10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,8 +128,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E936636626BAD44600ACAF62 /* SDWebImageSwiftUI in Frameworks */,
+				E94AA399277646C900E8C0DC /* FirebaseAuth in Frameworks */,
 				E90B7DF426B4506800B48582 /* Contentful in Frameworks */,
+				E94AA397277646C900E8C0DC /* FirebaseAnalytics in Frameworks */,
 				E9CAA55F271930960007246F /* Lottie in Frameworks */,
+				E94AA39B277646C900E8C0DC /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,14 +158,6 @@
 		E9690B5E2664700300B76C10 /* DesignCodeProject */ = {
 			isa = PBXGroup;
 			children = (
-				E9690B5F2664700300B76C10 /* DesignCodeProjectApp.swift */,
-				E9690B612664700300B76C10 /* ContentView.swift */,
-				E9CDB347267AD10E009ECA34 /* Home.swift */,
-				E9690B632664700500B76C10 /* Assets.xcassets */,
-				E9CAA558271930390007246F /* Lottie */,
-				E9F83C06269163E000479A7B /* Work_Sans */,
-				E9690B682664700500B76C10 /* Info.plist */,
-				E9690B652664700500B76C10 /* Preview Content */,
 				E9690B6E26648CEC00B76C10 /* PracticeView.swift */,
 				E90B8D0B266687E0001655AC /* MenuView.swift */,
 				E9CDB349267B9E4C009ECA34 /* HomeView.swift */,
@@ -179,6 +179,15 @@
 				E9CAA5622719325B0007246F /* LoadingView.swift */,
 				E91CD42F270206CB00E9BCCA /* Buttons.swift */,
 				E9CAA5562715E3650007246F /* LoginView.swift */,
+				E9690B5F2664700300B76C10 /* DesignCodeProjectApp.swift */,
+				E9690B612664700300B76C10 /* ContentView.swift */,
+				E9CDB347267AD10E009ECA34 /* Home.swift */,
+				E9690B632664700500B76C10 /* Assets.xcassets */,
+				E9CAA558271930390007246F /* Lottie */,
+				E9F83C06269163E000479A7B /* Work_Sans */,
+				E9690B682664700500B76C10 /* Info.plist */,
+				E94AA3932776450F00E8C0DC /* GoogleService-Info.plist */,
+				E9690B652664700500B76C10 /* Preview Content */,
 			);
 			path = DesignCodeProject;
 			sourceTree = "<group>";
@@ -257,6 +266,9 @@
 				E90B7DF326B4506800B48582 /* Contentful */,
 				E936636526BAD44600ACAF62 /* SDWebImageSwiftUI */,
 				E9CAA55E271930960007246F /* Lottie */,
+				E94AA396277646C900E8C0DC /* FirebaseAnalytics */,
+				E94AA398277646C900E8C0DC /* FirebaseAuth */,
+				E94AA39A277646C900E8C0DC /* FirebaseFirestore */,
 			);
 			productName = DesignCodeProject;
 			productReference = E9690B5C2664700300B76C10 /* DesignCodeProject.app */;
@@ -289,6 +301,7 @@
 				E90B7DF226B4506800B48582 /* XCRemoteSwiftPackageReference "contentful.swift" */,
 				E936636426BAD44600ACAF62 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				E9CAA55D271930960007246F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				E94AA395277646C900E8C0DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = E9690B5D2664700300B76C10 /* Products */;
 			projectDirPath = "";
@@ -315,6 +328,7 @@
 				E9F83C22269163E000479A7B /* WorkSans-SemiBoldItalic.ttf in Resources */,
 				E9F83C2F269163E000479A7B /* WorkSans-ExtraBoldItalic.ttf in Resources */,
 				E9CAA55B271930390007246F /* loading.json in Resources */,
+				E94AA3942776450F00E8C0DC /* GoogleService-Info.plist in Resources */,
 				E9F83C1E269163E000479A7B /* WorkSans-VariableFont_wght.ttf in Resources */,
 				E9F83C2C269163E000479A7B /* WorkSans-Thin.ttf in Resources */,
 				E9F83C25269163E000479A7B /* WorkSans-ExtraLight.ttf in Resources */,
@@ -465,7 +479,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -570,6 +584,14 @@
 				minimumVersion = 2.0.2;
 			};
 		};
+		E94AA395277646C900E8C0DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		E9CAA55D271930960007246F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -590,6 +612,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E936636426BAD44600ACAF62 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		E94AA396277646C900E8C0DC /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E94AA395277646C900E8C0DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		E94AA398277646C900E8C0DC /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E94AA395277646C900E8C0DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E94AA39A277646C900E8C0DC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E94AA395277646C900E8C0DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 		E9CAA55E271930960007246F /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

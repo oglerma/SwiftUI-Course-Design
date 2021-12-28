@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LoginView: View {
 	@State var email = ""
@@ -20,13 +21,21 @@ struct LoginView: View {
 		hideKeyboard()
 		isFocused = false
 		isLoading = true
-		
-		DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+
+		Auth.auth().signIn(withEmail: email, password: password) {
+			result, error in
 			isLoading = false
-			isSuccessful = true
-			
-			DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-				isSuccessful = false
+			if error != nil {
+				self.alertMessage = error?.localizedDescription ?? ""
+				self.showAlert = true
+			} else {
+				isSuccessful = true
+				
+				DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+					self.email = ""
+					self.password = ""
+					isSuccessful = false
+				}
 			}
 		}
 	}
