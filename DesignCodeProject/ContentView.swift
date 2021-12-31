@@ -28,7 +28,8 @@ struct ContentView: View {
                 )
 
             BackCardView()
-                .frame(width: showCard ? CGFloat(300) : CGFloat(340), height: CGFloat(220))
+                .frame(maxWidth: showCard ? CGFloat(300) : CGFloat(340))
+				.frame(height: 220)
                 .background(show ? Color("card3") : Color("card4"))
                 .cornerRadius(20.0)
                 .shadow(radius: 20.0)
@@ -46,7 +47,8 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.5))
 
             BackCardView()
-                .frame(width: 340.0, height: 220.0)
+                .frame(maxWidth: 340.0)
+				.frame(height: 220)
                 .background(show ? Color("card4") : Color("card3"))
                 .cornerRadius(20.0)
                 .shadow(radius: 20.0)
@@ -64,7 +66,8 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.3))
 
             CardView()
-                .frame(width: showCard ? CGFloat(375) : CGFloat(340), height:CGFloat(220))
+                .frame(maxWidth: showCard ? CGFloat(375) : CGFloat(340))
+				.frame(height: 220)
                 .background(Color.black)
                 .clipShape(RoundedRectangle(cornerRadius: showCard ? 30.0 : 20.0, style: .continuous))
                 .shadow(radius: 20.0)
@@ -89,8 +92,10 @@ struct ContentView: View {
                     }
                 )
             
+			
+			GeometryReader { bounds in
             BottomCardView(show: $showCard)
-                .offset(x: 0.0, y: showCard ? 360.0 : 1000.0)
+					.offset(x: 0.0, y: showCard ? bounds.size.height / 2 : bounds.size.height + bounds.safeAreaInsets.top + bounds.safeAreaInsets.bottom)
                 .offset(y: bottomState.height)
                 .blur(radius: show ? 20.0 : 0.0)
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1.0, duration: 0.8))
@@ -119,6 +124,10 @@ struct ContentView: View {
                        
                     }
                 )
+			}
+//			.edgesIgnoringSafeArea(.all)
+			// we can do this or just add it ourselves to ignore those areas when we calculate heigth of screen
+			// like so: bounds.size.height + bounds.safeAreaInsets.top + bounds.safeAreaInsets.bottom
         }
     }
 }
@@ -126,6 +135,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+			.previewLayout(.fixed(width: 320, height: 667))
     }
 }
 
@@ -177,6 +187,9 @@ struct TitleView: View {
             }
             .padding()
             Image("Background1")
+				.resizable()
+				.aspectRatio(contentMode: .fit)
+				.frame(maxWidth: 375)
             Spacer()
         }
     }
@@ -222,10 +235,11 @@ struct BottomCardView: View {
         }
         .padding(.top, 8.0)
         .padding(.horizontal, 20.0)
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: 712)
 		.background(BlurView(style: .systemUltraThinMaterial))
         .cornerRadius(30.0)
         .shadow(radius: 20.0)
+		.frame(maxWidth: .infinity)
         
     }
 }
