@@ -32,6 +32,7 @@ struct LoginView: View {
 			} else {
 				isSuccessful = true
 				user.isLogged = true
+				UserDefaults.standard.set(true, forKey: "isLogged")
 				DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 					self.email = ""
 					self.password = ""
