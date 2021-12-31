@@ -11,6 +11,7 @@ struct Home: View {
     @State var showProfile = false
     @State var viewState = CGSize.zero
     @State var showContent = false
+	@EnvironmentObject var user: UserStore
     var body: some View {
         ZStack {
             Color("background2")
@@ -55,8 +56,30 @@ struct Home: View {
                         viewState = .zero
                     }
                 )
-            
+			
+			if user.showLogin {
+				ZStack {
+					LoginView()
+					VStack {
+						HStack {
+							Spacer()
+							Image(systemName: "xmark")
+								.frame(width: 36, height: 36)
+								.foregroundColor(.white)
+								.background(Color.black)
+								.clipShape(Circle())
+						}
+						Spacer()
+					}
+					.padding()
+					.onTapGesture {
+						self.user.showLogin = false
+					}
+				}
+			}
+			
             if showContent {
+
 				BlurView(style: .systemMaterial).edgesIgnoringSafeArea(.all)
                 ContentView()
                 
@@ -91,21 +114,39 @@ struct Home_Previews: PreviewProvider {
     static var previews: some View {
 		Home().environment(\.colorScheme, .dark)
 			.environment(\.sizeCategory, .extraExtraExtraLarge)
+			.environmentObject(UserStore())
     }
 }
 
 struct AvatarView: View {
     @Binding var showProfile: Bool
+	@EnvironmentObject var user: UserStore
     
     var body: some View {
-        Button(action: { showProfile.toggle()}){
-            Image("Avatar")
-                .renderingMode(.original)
-                .resizable()
-                .frame(width: 36, height: 36, alignment: .center)
-                .clipShape(Circle())
-            
-        }
+		VStack {
+			if user.isLogged {
+				Button(action: { showProfile.toggle()}){
+				Image("Avatar")
+					.renderingMode(.original)
+					.resizable()
+					.frame(width: 36, height: 36, alignment: .center)
+					.clipShape(Circle())
+				
+				}
+			} else {
+				Button(action: { self.user.showLogin.toggle()}){
+					Image(systemName: "person")
+						.foregroundColor(.primary)
+						.font(.system(size: 16, weight: .medium))
+						.frame(width: 36, height: 36, alignment: .center)
+						.background(Color("background3"))
+						.clipShape(Circle())
+						.shadow(color: .black.opacity(0.1), radius: 1, x: 0, y: 1 )
+						.shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
+					
+				}
+			}
+		}
     }
 }
 
