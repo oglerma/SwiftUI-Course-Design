@@ -20,7 +20,7 @@ struct DesignCodeProjectApp: App {
 	@UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-			Home()
+			CourseList()
 				.environmentObject(UserStore())
         }
     }
