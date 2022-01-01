@@ -54,11 +54,12 @@ struct UpdateList: View {
                     store.updates.move(fromOffsets: source, toOffset: destination)
                 }
             }
-            .navigationBarTitle(Text("Updatess"))
+            .navigationBarTitle(Text("Updates"))
             .navigationBarItems(leading: Button(action: addUpdate) {
                 Text("Add item")
             }, trailing: EditButton())
         }
+		.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
