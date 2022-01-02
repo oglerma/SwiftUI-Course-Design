@@ -10,12 +10,14 @@ import SwiftUI
 struct TabBar: View {
     var body: some View {
         TabView {
-            Home().tabItem {
+            Home()
+				.tabItem {
                     Image(systemName: "play.circle.fill")
                     Text("Home")
                 }
             
-            CourseList().tabItem {
+            CourseList()
+				.tabItem {
                 Image(systemName: "rectangle.stack.fill")
                 Text("Courses")
             }
@@ -26,5 +28,6 @@ struct TabBar: View {
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
         TabBar()
+			.environmentObject(UserStore())
     }
 }
