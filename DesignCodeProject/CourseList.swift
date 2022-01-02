@@ -190,7 +190,7 @@ struct CourseView: View {
 			
 			if isScrollable {
 				CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex, isScrollable: $isScrollable, bounds: bounds)
-					.background(Color.white)
+					.background(Color("background1"))
 					.clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
 					.animation(nil)
 					.transition(.identity)
